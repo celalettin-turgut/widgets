@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Input } from "antd";
+import axios from "axios";
 
 const Search = () => {
   const [term, setTerm] = useState("");
@@ -7,10 +8,6 @@ const Search = () => {
   const onChange = (event) => {
     setTerm(event.target.value);
   };
-
-  useEffect(() => {
-    console.log(term);
-  }, [term]);
 
   return (
     <div>
@@ -20,7 +17,9 @@ const Search = () => {
         //there is no need to e.target.value | parameter is what the user inputs
         onSearch={(value) => console.log(value)}
         onChange={onChange}
+        value={term}
       />
+      {console.log("Burasi render")}
     </div>
   );
 };
