@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import DropDown from "./components/DropDown";
+import Counter from "./components/Counter";
 import "./App.css";
 
 const data = [
@@ -35,9 +36,16 @@ const options = [
 ];
 
 const App = () => {
+  const [selected, setSelected] = useState(options[0]);
   return (
     <div className='container'>
-      <DropDown options={options} />
+      <Counter />
+      <br />
+      <DropDown
+        selected={selected}
+        setSelected={setSelected}
+        options={options}
+      />
       <Accordion data={data} />
       <hr />
       <br />
