@@ -1,0 +1,21 @@
+{
+  "workbench.colorTheme": "Monokai Pro",
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "window.zoomLevel": 2,
+  "editor.fontSize": 16,
+  "debug.console.fontSize": 15,
+  "terminal.integrated.fontSize": 12,
+  "markdown.preview.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "window.menuBarVisibility": "toggle",
+  "workbench.statusBar.visible": true,
+  "prettier.jsxSingleQuote": true,
+  "codestream.email": "celalettin.turgut@hotmail.com",
+  "git.autofetch": true,
+  "git.confirmSync": false
+}
