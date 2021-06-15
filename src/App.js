@@ -3,6 +3,7 @@ import Accordion from './components/Accordion';
 import Search from './components/Search';
 import DropDown from './components/DropDown';
 import Counter from './components/Counter';
+import { Button } from 'antd';
 import './App.css';
 
 const data = [
@@ -40,7 +41,8 @@ const App = () => {
   const [showCounter, setShowCounter] = useState(false);
   return (
     <div className="container">
-      <Counter />
+      <Button onClick={() => setShowCounter(!showCounter)}>Show Counter</Button>
+      {showCounter ? <Counter start={100} /> : null}
       <br />
       <DropDown
         selected={selected}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
+const Counter = ({ start }) => {
+  const [count, setCount] = useState(start);
 
   useEffect(() => {
     let intervalID = setInterval(() => {
