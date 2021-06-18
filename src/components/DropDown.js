@@ -2,7 +2,7 @@ import React from 'react';
 import { Menu, Dropdown, Button } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 
-const DropDown = ({ options, selected, setSelected }) => {
+const DropDown = ({ label, options, selected, setSelected }) => {
   const menu = (
     <Menu onClick={handleMenuClick}>
       {options
@@ -28,11 +28,15 @@ const DropDown = ({ options, selected, setSelected }) => {
   }
 
   return (
-    <Dropdown overlay={menu}>
-      <Button>
-        {selected.label} <DownOutlined />
-      </Button>
-    </Dropdown>
+    <div>
+      <label>{label}</label>
+      <br />
+      <Dropdown overlay={menu} placement='bottomCenter'>
+        <Button>
+          {selected.label} <DownOutlined />
+        </Button>
+      </Dropdown>
+    </div>
   );
 };
 
