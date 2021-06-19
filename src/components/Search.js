@@ -37,7 +37,7 @@ const Search = () => {
       console.log(data.query.search);
       setResults(data.query.search);
     };
-    search();
+    if (debouncedTerm) search();
   }, [debouncedTerm]);
 
   // useEffect(() => {
@@ -80,7 +80,7 @@ const Search = () => {
   return (
     <div>
       <Input.Search
-        placeholder="Input your search term"
+        placeholder='Input your search term'
         enterButton
         //there is no need to e.target.value | value parameter is what the user inputs
         onSearch={value => console.log(value)}
@@ -88,7 +88,7 @@ const Search = () => {
         value={term}
       />
       <List
-        itemLayout="horizontal"
+        itemLayout='horizontal'
         dataSource={results}
         renderItem={item => (
           <List.Item>

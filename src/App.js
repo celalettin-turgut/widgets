@@ -5,7 +5,7 @@ import DropDown from './components/DropDown';
 import Counter from './components/Counter';
 import Translate from './components/Translate';
 import Route from './components/Route';
-import { Button } from 'antd';
+import Header from './components/Header';
 import './App.css';
 
 const data = [
@@ -27,6 +27,7 @@ const App = () => {
   const [showCounter, setShowCounter] = useState(false);
   return (
     <div className='container'>
+      <Header />
       <Route path='/'>
         <Accordion data={data} />
       </Route>
